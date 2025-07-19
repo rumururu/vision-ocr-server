@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: vision-ocr-server
+    env: python
+    buildCommand: ""
+    startCommand: "gunicorn app:app"
+    envVars:
+      - key: GOOGLE_VISION_API_KEY
+        sync: false
+
+
