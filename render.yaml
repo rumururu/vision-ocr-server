@@ -6,6 +6,6 @@ services:
     startCommand: "gunicorn app:app"
     envVars:
       - key: GOOGLE_VISION_API_KEY
-        sync: false
-
-
+        sync: false   # Render 웹 UI에서 직접 입력 (보안 이유로 코드에 포함 X)
+      - key: GPT_INTERNAL_TOKEN
+        sync: false   # 인증 토큰도 웹 UI에서 직접 입력
